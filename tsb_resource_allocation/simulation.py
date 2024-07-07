@@ -91,7 +91,7 @@ class Simulation:
                 pts = self.selective_retry(pts, failed_at, clusters)
             elif self.retry_mode == "partial":
                 pts = self.partial_retry(pts, failed_at, clusters)
-                
+
         return waste, retries-1, runtime
     
     def get_clusters(self, pts):
